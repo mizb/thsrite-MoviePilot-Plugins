@@ -17,7 +17,11 @@
             "mount_path": "/mnt/cloud/115/media/movies",
             "return_path": "/mnt/softlink/movies",
             "delete_local": "false",
+            "local_preserve_hierarchy": 0,
             "delete_history": "false",
+            "delete_source": "false",
+            "source_dirs": "/mnt/media/movies, /mnt/media/series",
+            "source_preserve_hierarchy": 0,
             "just_media": "true",
             "overwrite": "false",
             "upload_cloud": "true"
@@ -41,7 +45,11 @@
             "cloud_url": "http://localhost:19798",
             "cloud_scheme": "http/https",
             "delete_local": "false",
+            "local_preserve_hierarchy": 0,
             "delete_history": "false",
+            "delete_source": "false",
+            "source_dirs": "/mnt/media/movies, /mnt/media/series",
+            "source_preserve_hierarchy": 0,
             "just_media": "true",
             "overwrite": "false",
             "upload_cloud": "true"
@@ -64,7 +72,11 @@ cd2方式上传--softlink回本地（暂时移除）
             "cd2_path": "/115/media/movies",
             "return_path": "/mnt/softlink/movies",
             "delete_local": "false",
+            "local_preserve_hierarchy": 0,
             "delete_history": "false",
+            "delete_source": "false",
+            "source_dirs": "/mnt/media/movies, /mnt/media/series",
+            "source_preserve_hierarchy": 0,
             "just_media": "true",
             "overwrite": "false",
             "upload_cloud": "true"
@@ -91,7 +103,11 @@ cd2方式上传--strm回本地（暂时移除）
             "cloud_url": "http://localhost:19798",
             "cloud_scheme": "http/https",
             "delete_local": "false",
+            "local_preserve_hierarchy": 0,
             "delete_history": "false",
+            "delete_source": "false",
+            "source_dirs": "/mnt/media/movies, /mnt/media/series",
+            "source_preserve_hierarchy": 0,
             "just_media": "true",
             "overwrite": "false",
             "upload_cloud": "true"
@@ -113,7 +129,11 @@ cd2方式上传--strm回本地（暂时移除）
 - return_path：MoviePilot中软链接/strm生成路径
 - monitor_mode：监控模式 compatibility/fast
 - delete_local：是否删除本地文件
+- local_preserve_hierarchy：保留监控路径目录层级，例如 1：表示保留监控目录后一层目录结构，0：表示仅保留到监控目录
 - delete_history：是否删除MoviePilot中转移历史记录
+- delete_source：是否删除源文件，仅上述监控路径查询到转移记录时才生效，删除转移记录的源文件路径
+- source_dirs：源文件的目录，多个目录用逗号分隔
+- source_preserve_hierarchy：保留源文件路径目录层级，0：表示仅监控到源文件目录，1：表示监控源文件目录及其一级子目录
 - just_media：是否只监控媒体文件
 - overwrite：是否覆盖已存在云盘文件
 - upload_cloud: 是否上传到云盘,false则直接软连接或者strm回本地
